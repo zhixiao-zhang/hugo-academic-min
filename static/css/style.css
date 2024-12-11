@@ -223,6 +223,14 @@ video {
 
   .profile {
     margin-top: 50px;
+    flex-direction: column;
+    .avatar {
+      order: 1;
+      margin-bottom: 10px;
+    }
+    .about {
+      order: 2;
+    }
   }
 
   #menu-toggle {
@@ -259,9 +267,5 @@ video {
 
   .header.expanded {
     height: auto;
-  }
-
-  .avatar {
-    display: none;
   }
 }
