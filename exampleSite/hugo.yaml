@@ -1,0 +1,139 @@
+baseurl: "https://example.org/"  # please update this to your actual URL
+languageCode: "en-us"
+title: "Алексей Иванович Петров"
+theme: "hugo-min-academic"
+googleAnalytics: ""
+disqusShortname: ""
+footnotereturnlinkcontents: "↩"
+
+params:
+  author: "Volcano Rock"
+  description: "An academic website"
+  footer: "&copy; Volcano Rock 2024 -- Present"
+  singlePageMenu:
+    - "About"
+    - "News"
+    - "Publications"
+    - "Students"
+    - "Experience"
+    - "Teaching"
+    - "Service"
+  about: >-
+    I am an associate professor in the Department of Geology at the University of Volcano. My research interests include rock statistics, volcanic learning, and causal inference. I am also interested in earthquake prediction and statistical computing.<br>
+    **Email**: volcanic at example dot com <br>
+    **Github**: [volcanic](https://github.com/)
+  avatar: "profile.jpeg"
+  news: "**News:** I'm looking forward to a PhD student in volcanic statistics at the University of Earth."
+  publications:
+    - title: >-
+        Paper 1
+      authors: "<span>Author 1</span>, Author 2, and Author 3"
+      conference: "Conference 1"
+      details: >-
+        In Proceedings of the UGC on Swimming Languages, Volume X, Issue CASJDS1 , Earth, Universal, 2023
+      video: "#"
+      code: "#"
+    - title: >-
+        Publication 2
+      authors: "<span>Author 1</span>, Author 2, and Author 3"
+      conference: "Conference 2"
+      video: "#"
+      details: >-
+        In Proceedings of the UGC on Swimming Languages, Volume X, Issue CASJDS1 , Earth, Universal, 2023
+      code: "#"
+  anotherInfo: >-
+    > I also maintain a blog in Chinese, which can be found _[here](https://example.com/)_.
+  education:
+    - degree: "PhD in Geology"
+      institution: "University of Volcano"
+      date: "2010-2014"
+      location: "Earth"
+    - degree: "MSc in Geology"
+      institution: "University of Earth"
+      date: "2008-2010"
+      location: "Earth"
+    - degree: "BSc in Geology"
+      institution: "University of Fire"
+      date: "2004-2008"
+      location: "Earth"
+  work:
+    - degree: "Associate Professor"
+      company: "University of Volcano"
+      date: "2020-Present"
+      location: "Earth"
+    - degree: "Assistant Professor"
+      company: "University of Volcano"
+      date: "2016-2020"
+      location: "Earth"
+    - degree: "Postdoc"
+      company: "University of Earth"
+      date: "2014-2016"
+      location: "Earth"
+  advice:
+    - summary: >-
+        Here are my advice for students.
+    - text:
+      - "Do not be afraid of asking questions."
+      - "Do not be afraid of making mistakes."
+      - "Do not be afraid of trying new things."
+  students:
+    - current:
+      - name: "Student 1"
+        notes: "(2020-) PhD"
+        website: "https://example.com/"
+      - name: "Student 2"
+        notes: "(2019-) Master"
+    - alumni:
+      - name: "Student 3"
+        notes: "(2016-2020) PhD"
+      - name: "Student 4"
+        notes: "(2015-2019) Master"
+      - name: "Student 5"
+        notes: "(2014-2016) Undergraduate"
+  teaching:
+    - 2024:
+      - course: "Geology 101, "
+        notes: "Volcanic rocks and their statistics, Spring 2024"
+        website: "https://example.com/"
+      - course: "Geology 102, "
+        notes: "Volcanic rocks and their statistics, Fall 2024"
+    - 2023:
+      - course: "Geology 101, "
+        notes: "Volcanic rocks and their statistics, Spring 2023"
+        website: "https://example.com/"
+      - course: "Geology 102, "
+        notes: "Volcanic rocks and their statistics, Fall 2023"
+  service:
+    - 2024:
+      - title: "Program Committee"
+        institution: "Conference"
+        notes: "Volcanic rocks and their statistics, Spring 2024"
+      - title: "Reviewer"
+        institution: "Journal"
+        notes: "Volcanic rocks and their statistics, Fall 2024"
+    - 2023:
+      - title: "Program Committee"
+        institution: "Conference"
+        notes: "Volcanic rocks and their statistics, Spring 2023"
+      - title: "Program Committee"
+        institution: "Conference"
+        notes: "Volcanic rocks and their statistics, Fall 2023"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)

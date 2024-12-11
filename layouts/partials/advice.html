@@ -1,0 +1,16 @@
+    {{ if .Site.Params.advice }}
+    <details>
+      {{ with index .Site.Params.advice 0 }}
+      <summary style="font-size: 1.2em;">{{ .summary }}</summary>
+      {{ end }}
+      <div style="font-size: 1.1em;">
+      {{ with index .Site.Params.advice 1 }}
+      <ol>
+        {{ range .text }}
+        <li><p>{{ . }}</p></li>
+        {{ end }}
+      </ol>
+      {{ end }}
+      </div>
+    </details>
+    {{ end }}

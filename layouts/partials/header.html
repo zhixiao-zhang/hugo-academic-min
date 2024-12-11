@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    {{ partial "head_custom.html" . }}
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="homeTitle">{{ .Site.Title }}</div>
+      <button id="menu-toggle" onclick="toggleMenu()">⋯</button>
+      <nav id="menu" class="menu">
+        <ul>
+          {{ range .Site.Params.singlePageMenu }}
+          <li><a href="#{{ . }}">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+    <div class="content">

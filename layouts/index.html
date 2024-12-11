@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+
+{{ $pageContext := . }}
+{{ range .Site.Params.singlePageMenu }}
+{{ partial (printf "%s.html" .) $pageContext }}
+{{ end }}
+
+{{ partial "footer.html" . }}

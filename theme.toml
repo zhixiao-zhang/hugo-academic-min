@@ -1,0 +1,13 @@
+name = "hugo-academic-min"
+license = "MIT"
+licenselink = "https://github.com/zhixiao-zhang/hugo-min-academic/blob/master/LICENSE.md"
+description = "A minimal Hugo theme for academic websites"
+homepage = "https://zhixiao-zhang.github.io/"
+demosite = "https://zhixiao-zhang.github.io/"
+tags = ["minimal", "academic", "cv", "clean", "simple", "starter", "minimalist"]
+features = ["cv"]
+min_version = "0.18"
+
+[author]
+  name = "Zhixiao Zhang"
+  homepage = "https://zhixiao-zhang.github.io/"
