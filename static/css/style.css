@@ -220,6 +220,11 @@ video {
     padding: 0 10px;
     padding-top: 10px;
   }
+
+  .profile {
+    margin-top: 50px;
+  }
+
   #menu-toggle {
     background-color: white;
     display: block;
