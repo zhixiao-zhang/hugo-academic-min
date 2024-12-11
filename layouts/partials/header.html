@@ -13,11 +13,18 @@
   <body>
     <div class="header">
       <div class="homeTitle">{{ .Site.Title }}</div>
-      <button id="menu-toggle" onclick="toggleMenu()">⋯</button>
+      <button id="menu-toggle">⋯</button>
       <nav id="menu" class="menu">
         <ul>
+          {{ $currentPage := . }}
           {{ range .Site.Params.singlePageMenu }}
-          <li><a href="#{{ . }}">{{ . }}</a></li>
+          <li>
+            {{ if $currentPage.IsHome }}
+              <a href="#{{ . }}">{{ . }}</a>
+            {{ else }}
+              <a href="{{ $currentPage.Site.BaseURL }}#{{ . }}">{{ . }}</a>
+            {{ end }}
+          </li>
           {{ end }}
         </ul>
       </nav>
