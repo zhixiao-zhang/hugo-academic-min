@@ -12,7 +12,7 @@
 
   <body>
     <div class="header">
-      <div class="homeTitle">{{ .Site.Title }}</div>
+      <div class="homeTitle">{{ .Site.Title | markdownify }}</div>
       <button id="menu-toggle">⋯</button>
       <nav id="menu" class="menu">
         <ul>
