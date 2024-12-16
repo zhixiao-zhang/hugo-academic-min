@@ -12,6 +12,7 @@ params:
   footer: "&copy; Volcano Rock 2024 -- Present"
   singlePageMenu:
     - "About"
+    - "Contact"
     - "News"
     - "Publications"
     - "Students"
@@ -21,10 +22,15 @@ params:
     - "Blog"
   about: >-
     I am an associate professor in the Department of Geology at the University of Volcano. My research interests include rock statistics, volcanic learning, and causal inference. I am also interested in earthquake prediction and statistical computing.<br>
-    **Email**: volcanic at example dot com <br>
-    **Github**: [volcanic](https://github.com/)
   avatar: "profile.jpeg"
   news: "**News:** I'm looking forward to a PhD student in volcanic statistics at the University of Earth."
+  contact:
+    - email: "zhixiao-zhang@outlook.com"
+    - github: "zhixiao-zhang"
+    - google_scholar: "https://scholar.google.com/"
+    - linkedin: "https://www.linkedin.com/"
+    - orcid: "https://orcid.org/"
+    - twitter: "https://twitter.com/"
   publications:
     - title: >-
         Paper 1
