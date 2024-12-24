@@ -1,0 +1,12 @@
+- 2024:
+  - course: "Geology 101, "
+    notes: "Volcanic rocks and their statistics, Spring 2024"
+    website: "https://example.com/"
+  - course: "Geology 102, "
+    notes: "Volcanic rocks and their statistics, Fall 2024"
+- 2023:
+  - course: "Geology 101, "
+    notes: "Volcanic rocks and their statistics, Spring 2023"
+    website: "https://example.com/"
+  - course: "Geology 102, "
+    notes: "Volcanic rocks and their statistics, Fall 2023"

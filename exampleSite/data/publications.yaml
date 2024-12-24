@@ -1,0 +1,12 @@
+- title: Paper 1
+  authors: "<span>Author 1</span>, Author 2, and Author 3"
+  conference: "Conference 1"
+  details: In Proceedings of the UGC on Swimming Languages, Volume X, Issue CASJDS1 , Earth, Universal, 2023
+  video: "#"
+  code: "#"
+- title: Publication 2
+  authors: "<span>Author 1</span>, Author 2, and Author 3"
+  conference: "Conference 2"
+  video: "#"
+  details: In Proceedings of the UGC on Swimming Languages, Volume X, Issue CASJDS1 , Earth, Universal, 2023
+  code: "#"

@@ -19,13 +19,18 @@
       <nav id="menu" class="menu">
         <ul>
           {{ $currentPage := . }}
-          {{ range .Site.Params.singlePageMenu }}
+          {{ range .Site.Params.menu }}
           <li>
             {{ if $currentPage.IsHome }}
               <a href="#{{ . }}">{{ . }}</a>
             {{ else }}
               <a href="{{ $currentPage.Site.BaseURL }}#{{ . }}">{{ . }}</a>
             {{ end }}
+          </li>
+          {{ end }}
+          {{ if .Site.Params.bib }}
+          <li>
+            <a href="{{ $currentPage.Site.BaseURL }}bibliography">Bib</a>
           </li>
           {{ end }}
         </ul>

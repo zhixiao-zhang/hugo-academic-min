@@ -1,7 +1,7 @@
     <div id="Teaching" class="Teaching">
       <div class="profileTitle">Teaching</div>
       <div class="CourseInfo">
-        {{ range .Site.Params.teaching }}
+        {{ range .Site.Data.teaching }}
           {{ range $year, $courses := . }}
             {{ $year }}
             <ul>

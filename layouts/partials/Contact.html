@@ -1,6 +1,6 @@
     <div id="Contact" class="contact">
       <span class="contaction">
-        {{ range .Site.Params.contact }}
+        {{ range .Site.Data.contact }}
           {{ if .email }}
           <a href="{{.email}}">
             <i class="fa-regular fa-envelope" style="color: black;"></i>

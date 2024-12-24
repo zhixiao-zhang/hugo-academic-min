@@ -1,9 +1,9 @@
     <div id="Experience" class="Experience">
       <div class="profileTitle">Experience</div>
-      {{ if .Site.Params.work }}
+      {{ if .Site.Data.work }}
         <div class="ExperienceTitle">Career</div>
         <ul>
-        {{ range .Site.Params.work }}
+        {{ range .Site.Data.work }}
         <li>
           <div class="education">
             <div class="first-line">
@@ -19,10 +19,10 @@
         {{ end }}
         </ul>
       {{ end }}
-      {{ if .Site.Params.education }}
+      {{ if .Site.Data.education }}
         <div class="ExperienceTitle">Education</div>
         <ul>
-        {{ range .Site.Params.education }}
+        {{ range .Site.Data.education }}
         <li>
           <div class="education">
             <div class="first-line">

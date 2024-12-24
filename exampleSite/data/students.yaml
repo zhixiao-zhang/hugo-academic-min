@@ -1,0 +1,13 @@
+- current:
+  - name: Student 1
+    notes: (2020-) PhD
+    website: https://example.com/
+  - name: Student 2
+    notes: (2019-) Master
+- alumni:
+  - name: Student 3
+    notes: (2016-2020) PhD
+  - name: Student 4
+    notes: (2015-2019) Master
+  - name: Student 5
+    notes: (2014-2016) Undergraduate

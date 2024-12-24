@@ -1,7 +1,7 @@
     <div id="Students" class="Students">
       <div class="profileTitle">Students</div>
       <div class="studentsInfo">
-        {{ with index .Site.Params.students 0 }}
+        {{ with index .Site.Data.students 0 }}
           <div class="studentsTitle">Current Students</div>
           <ul>
           {{ range .current }}
@@ -18,7 +18,7 @@
           {{ end }}
           </ul>
         {{ end }}
-        {{ with index .Site.Params.students 1 }}
+        {{ with index .Site.Data.students 1 }}
           <div class="studentsTitle">Alumni</div>
           <ul>
           {{ range .alumni }}
