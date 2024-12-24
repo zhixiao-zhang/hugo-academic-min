@@ -1,0 +1,21 @@
+<div class="bibs">
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    {{ range .Site.Data.bib }}
+      <li>
+        <strong>{{ .title }}</strong>
+        <div style="color: #666; font-style: italic">
+          <div>{{ .authors }}</div>
+          <div>In {{ .journal }}{{ .conference }} {{ .year }}</div>
+        </div>
+        <a href="{{ .url }}" target="_blank">
+          <i class="fa-regular fa-file-pdf"></i>
+        </a>
+        <details>
+          <summary>Cite this </summary>
+          <div class="bib"><pre>{{ .bib }}</pre></div>
+        </details>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+

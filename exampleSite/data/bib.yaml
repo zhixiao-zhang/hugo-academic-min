@@ -1,0 +1,20 @@
+- title: A Comprehensive Survey on Mutation Testing
+  authors: John Doe and Jane Smith
+  year: '2021'
+  journal: Journal of Software Testing
+  doi: 10.xxxx
+  url: https://doi.org/10.xxxx
+  bib: "@article{doe2021mutation,\n author = {John Doe and Jane Smith},\n doi = {10.xxxx},\n\
+    \ journal = {Journal of Software Testing},\n number = {2},\n pages = {123--145},\n\
+    \ title = {A Comprehensive Survey on Mutation Testing},\n url = {https://doi.org/10.xxxx},\n\
+    \ volume = {34},\n year = {2021}\n}\n"
+- title: Language-Based Security for Systems
+  authors: Alice Brown and Bob White
+  year: '2023'
+  journal: Systems Security Conference
+  doi: 10.yyyy
+  url: https://doi.org/10.yyyy
+  bib: "@inproceedings{brown2023security,\n author = {Alice Brown and Bob White},\n\
+    \ booktitle = {Systems Security Conference},\n doi = {10.yyyy},\n pages = {56--78},\n\
+    \ title = {Language-Based Security for Systems},\n url = {https://doi.org/10.yyyy},\n\
+    \ year = {2023}\n}\n"

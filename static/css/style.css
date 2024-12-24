@@ -197,6 +197,42 @@ a {
   font-size: 1.1em;
 }
 
+.bibs {
+  li {
+   border-radius: 8px;
+   /* 圆角 */
+   padding: 10px 15px;
+   /* 内边距 */
+   margin: 10px 0;
+   /* 每个列表项之间的间距 */
+   border: 1px solid #ddd;
+   /* 边框颜色 */
+  }
+
+  details {
+    position: relative;
+  }
+
+  details summary {
+    list-style: none;
+    /* 移除默认箭头 */
+    cursor: pointer;
+    /* 鼠标样式 */
+    display: flex;
+    align-items: center;
+  }
+
+  details summary::marker {
+    content: none;
+  }
+  details summary::before {
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.5em;
+  }
+}
+
 .notFound {
   margin-top: 80px;
   scroll-margin-top: 80px;
