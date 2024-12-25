@@ -5,10 +5,13 @@
         <strong>{{ .title }}</strong>
         <div style="color: #666; font-style: italic">
           <div>{{ .authors }}</div>
-          <div>In {{ .journal }}{{ .conference }} {{ .year }}</div>
+          <div>In {{ .source }} {{ .year }}</div>
         </div>
         <a href="{{ .url }}" target="_blank">
           <i class="fa-regular fa-file-pdf"></i>
+        </a>
+        <a href="/notes/{{ .blog }}/">
+          <i class="fa-solid fa-note-sticky"></i>
         </a>
         <details>
           <summary>Cite this </summary>
