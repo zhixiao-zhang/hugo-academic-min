@@ -15,10 +15,43 @@
         </a>
         <details>
           <summary>Cite this </summary>
-          <div class="bib"><pre>{{ .bib }}</pre></div>
+          <div class="bib">
+            <pre id="bib-{{ .blog }}">{{ .bib }}</pre>
+            <button
+                class="copy-button"
+                data-target="bib-{{ .blog }}"
+                onclick="copyToClipboard(event)">Copy</button>
+          </div>
         </details>
       </li>
     {{ end }}
   </ul>
 </div>
 
+<script>
+  function copyToClipboard(event) {
+    const button = event.currentTarget;
+    const targetId = button.getAttribute('data-target');
+    const textElement = document.getElementById(targetId);
+
+    if (textElement) {
+      // Copy text to clipboard
+      navigator.clipboard.writeText(textElement.textContent)
+        .then(() => {
+          // Change button text to a checkmark ✔
+          const originalText = button.textContent;
+          button.textContent = "✔";
+          button.disabled = true; // Temporarily disable the button
+          
+          // Restore original text after 2 seconds
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false; // Re-enable the button
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+    }
+  }
+</script>

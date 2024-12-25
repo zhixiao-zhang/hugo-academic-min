@@ -198,6 +198,21 @@ a {
 }
 
 .bibs {
+  position: relative;
+
+  .copy-button {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    /* 圆角矩形 */
+    cursor: pointer;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
   li {
    border-radius: 8px;
    /* 圆角 */
@@ -230,6 +245,13 @@ a {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     margin-right: 0.5em;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
 }
 
