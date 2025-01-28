@@ -24,6 +24,7 @@ body {
 .content {
   max-width: 800px;
   margin: auto;
+  margin-top: 60px;
   margin-bottom: 60px;
 }
 
@@ -81,7 +82,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
   scroll-margin-top: 80px;
 
   .about {
@@ -336,7 +336,6 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
   }
 
   .profile {
-    margin-top: 50px;
     flex-direction: column;
     .avatar {
       order: 1;
