@@ -14,7 +14,7 @@
 
   <body>
     <div class="header">
-      <div class="homeTitle">{{ .Site.Title | safeHTML }}</div>
+      <div class="homeTitle">{{ .Site.Params.Name | safeHTML }}</div>
       <button id="menu-toggle">⋯</button>
       <nav id="menu" class="menu">
         <ul>
