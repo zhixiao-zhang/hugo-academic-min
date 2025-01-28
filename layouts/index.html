@@ -1,8 +1,5 @@
 {{ partial "header.html" . }}
 
-{{ $pageContext := . }}
-{{ range .Site.Params.menu }}
-{{ partial (printf "%s.html" .) $pageContext }}
-{{ end }}
+{{ partial "academic.html" . }}
 
 {{ partial "footer.html" . }}

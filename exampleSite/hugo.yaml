@@ -9,6 +9,7 @@ footnotereturnlinkcontents: "↩"
 params:
   author: "Volcano Rock"
   description: "An academic website"
+  mail: "zhixiao-zhang at outlook dot com"
   footer: "&copy; Volcano Rock 2024 -- Present"
   menu:
     - "About"

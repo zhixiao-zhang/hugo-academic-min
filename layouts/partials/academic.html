@@ -1,0 +1,5 @@
+{{ $pageContext := . }}
+{{ range .Site.Params.menu }}
+{{ partial (printf "academic/%s.html" .) $pageContext }}
+{{ end }}
+
