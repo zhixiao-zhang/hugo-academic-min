@@ -2,6 +2,10 @@
 
 {{ .Content }}
 
-{{ partial "academic.html" . }}
+{{ if .Site.Params.singleBlog }}
+{{ partial "Blog.html" . }}
+{{ else }}
+{{ partial "Academic.html" . }}
+{{ end }}
 
 {{ partial "footer.html" . }}
