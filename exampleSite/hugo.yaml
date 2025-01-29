@@ -12,6 +12,7 @@ params:
   description: "An academic website"
   mail: "zhixiao-zhang at outlook dot com"
   footer: "&copy; Volcano Rock 2024 -- Present"
+  singleBlog: false
   menu:
     - "About"
     - "Contact"

@@ -15,6 +15,7 @@
 
   <body>
     <div class="header">
+      {{ if not .Site.Params.singleBlog }}
       <div class="homeTitle">{{ .Site.Params.Name | safeHTML }}</div>
       <button id="menu-toggle">⋯</button>
       <nav id="menu" class="menu">
@@ -36,5 +37,8 @@
           {{ end }}
         </ul>
       </nav>
+      {{ else }}
+      <div class="homeTitle"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Name | safeHTML }}</a></div>
+      {{ end }}
     </div>
     <div class="content">

@@ -41,6 +41,16 @@ body {
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #ccc;
+
+  a:link,
+  a:visited {
+    color: #000;
+  }
+
+  a:hover {
+    color: #f00;
+  }
+
   .homeTitle {
     flex: 1;
     font-size: 1.3em;
@@ -51,15 +61,6 @@ body {
     font-size: 1.2em;
     margin-right: 10px;
     display: flex;
-
-    a:link,
-    a:visited {
-      color: #000;
-    }
-  
-    a:hover {
-      color: #f00;
-    }
   
     li {
       display: inline;

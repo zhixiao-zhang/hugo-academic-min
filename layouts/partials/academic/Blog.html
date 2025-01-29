@@ -6,6 +6,13 @@
         {{ range (where $pages "Section" "!=" "") }}
         <li>
           <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+          {{ with .Params.categories }}
+          <span class="categories">
+            {{ range . }}
+              <a href="{{ printf "/categories/%s" . | relURL }}">[{{ . }}]</a>
+            {{ end }}
+          </span>
+          {{ end }}
           <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
         </li>
         {{ end }}
