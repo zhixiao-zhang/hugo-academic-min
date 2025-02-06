@@ -1,9 +1,14 @@
     <div id="About" class="profile">
-      <div class="about">{{ .Site.Data.about.content | markdownify }}</div>
+      <div class="about">
+        <p>{{ .Site.Data.about.content | markdownify }}</p>
+      </div>
       <div class="right">
         {{ if .Site.Params.avatar }}
         <img src="{{ `images` | relURL }}/{{ .Site.Params.avatar }}" alt="{{ .Site.Params.author }}" class="avatar">
         {{ end }}
-        <p><b>{{ .Site.Params.mail }}</b></p>
+        <div class="email">
+          <span class="placeholder">📧 Reveal Email</span>
+          <span class="address">{{ .Site.Params.mail }}</span>
+        </div>
       </div>
     </div>

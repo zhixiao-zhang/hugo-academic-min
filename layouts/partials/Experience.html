@@ -1,42 +1,29 @@
     <div id="Experience" class="Experience">
-      <div class="profileTitle">Experience</div>
+      <div class="profileTitle" style="margin-top: 10px">Experience</div>
       {{ if .Site.Data.work }}
-        <div class="ExperienceTitle">Career</div>
-        <ul>
+        <h3>Career</h3>
         {{ range .Site.Data.work }}
-        <li>
           <div class="education">
-            <div class="first-line">
-              <div class="institution">{{ .company }}</div>
-              <div class="date">{{ .date }}</div>
+            <div class="date">{{ .date }}</div>
+            <div class="tl-content">
+              <h3>🏢 {{ .institution }}</h3>
+              <p><strong>💼 {{ .degree }}</strong></p>
+              <p>🏙️ {{ .location }}</p>
             </div>
-            <div class="second-line">
-              <div class="degree">{{ .degree }}</div>
-              <div class="location">{{ .location }}</div>
-            </div>
-        </div>
-        </li>
+          </div>
         {{ end }}
-        </ul>
       {{ end }}
       {{ if .Site.Data.education }}
-        <div class="ExperienceTitle">Education</div>
-        <ul>
+        <h3>Education</h3>
         {{ range .Site.Data.education }}
-        <li>
           <div class="education">
-            <div class="first-line">
-              <div class="institution">{{ .institution }}</div>
-              <div class="date">{{ .date }}</div>
-            </div>
-            <div class="second-line">
-              <div class="degree">{{ .degree }}</div>
-              <div class="location">{{ .location }}</div>
+            <div class="date">{{ .date }}</div>
+            <div class="tl-content">
+              <h3>🏫 {{ .institution }}</h3>
+              <p><strong>🎓 {{ .degree }}</strong></p>
+              <p>🌇 {{ .location }}</p>
             </div>
         </div>
-        </li>
         {{ end }}
-        </ul>
       {{ end }}
     </div>
-

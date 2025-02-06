@@ -10,7 +10,7 @@ params:
   author: "Volcano Rock"
   name: "Алексей Иванович Петров"
   description: "An academic website"
-  mail: "zhixiao-zhang at outlook dot com"
+  mail: "example.example at outlook dot com"
   footer: "&copy; Volcano Rock 2024 -- Present"
   singleBlog: false
   menu:
@@ -18,8 +18,8 @@ params:
     - "Contact"
     - "News"
     - "Publications"
-    - "Students"
     - "Experience"
+    - "Students"
     - "Teaching"
     - "Service"
     - "Blog"

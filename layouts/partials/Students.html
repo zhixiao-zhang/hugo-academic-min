@@ -12,7 +12,15 @@
                 {{ else }}
                   {{ .name }}
                 {{ end }}
-                {{ .notes }}
+                {{ if eq .notes "PhD"}}
+                  <span class="badge phd">PhD</span>
+                {{ end }}
+                {{ if eq .notes "MSc"}}
+                  <span class="badge msc">MSc</span>
+                {{ end }}
+                {{ if eq .notes "Undergraduate"}}
+                  <span class="badge undergraduate">Undergraduate</span>
+                {{ end }}
               </li>
             </div>
           {{ end }}
@@ -29,7 +37,15 @@
                 {{ else }}
                   {{ .name }}
                 {{ end }}
-                {{ .notes }}
+                {{ if eq .notes "PhD"}}
+                  <span class="badge phd">PhD</span>
+                {{ end }}
+                {{ if eq .notes "MSc"}}
+                  <span class="badge msc">MSc</span>
+                {{ end }}
+                {{ if eq .notes "Undergraduate"}}
+                  <span class="badge undergraduate">Undergraduate</span>
+                {{ end }}
               </li>
             </div>
           {{ end }}
