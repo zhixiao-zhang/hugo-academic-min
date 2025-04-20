@@ -1,4 +1,4 @@
-    <div id="Service" class="Service">
+    <div id="service" class="Service">
       <div class="profileTitle">Service</div>
       <div class="ServiceInfo">
         {{ if .Site.Data.service }}
@@ -6,7 +6,7 @@
           {{ range $year, $positions := . }}
             {{ $year }}
             <ul>
-              {{ range $positions }} <!-- 遍历课程 -->
+              {{ range $positions }}
                 <li>
                   <strong>{{ .title }}</strong>,
                   <strong>{{ .institution }}</strong>,

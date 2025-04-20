@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ .Site.Params.description }}">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <title>{{ .Title }}</title>
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/academicons.min.css" | relURL }}" />
@@ -14,31 +14,8 @@
   </head>
 
   <body>
-    <div class="header">
-      {{ if not .Site.Params.singleBlog }}
+    <header>
       <div class="homeTitle">{{ .Site.Params.Name | safeHTML }}</div>
-      <button id="menu-toggle">⋯</button>
-      <nav id="menu" class="menu">
-        <ul>
-          {{ $currentPage := . }}
-          {{ range .Site.Params.menu }}
-          <li>
-            {{ if $currentPage.IsHome }}
-              <a href="#{{ . }}">{{ . }}</a>
-            {{ else }}
-              <a href="{{ $currentPage.Site.BaseURL }}#{{ . }}">{{ . }}</a>
-            {{ end }}
-          </li>
-          {{ end }}
-          {{ if .Site.Params.bib }}
-          <li>
-            <a href="{{ $currentPage.Site.BaseURL }}bibliography">Bib</a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
-      {{ else }}
-      <div class="homeTitle"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.Name | safeHTML }}</a></div>
-      {{ end }}
-    </div>
-    <div class="content">
+      {{ partial "menu.html" . }}
+    </header>
+    <main>

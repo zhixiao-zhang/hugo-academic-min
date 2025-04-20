@@ -1,4 +1,0 @@
-{{ $pageContext := . }}
-{{ range .Site.Params.menu }}
-{{ partial (printf "%s.html" .) $pageContext }}
-{{ end }}

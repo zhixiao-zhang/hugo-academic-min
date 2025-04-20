@@ -1,4 +1,5 @@
 <div class="bibs">
+  <h1>Bibliography</h1>
   <ul style="list-style: none; padding: 0; margin: 0;">
     {{ range .Site.Data.bib }}
       <li>
@@ -18,12 +19,12 @@
           <div class="bib">
             <pre id="bib-{{ .blog }}">{{ .bib }}</pre>
             <button
-                class="copy-button"
-                data-target="bib-{{ .blog }}"
-                onclick="copyToClipboard(event)">Copy</button>
+              class="copy-button"
+              data-target="bib-{{ .blog }}"
+              onclick="copyToClipboard(event)">Copy</button>
           </div>
         </details>
       </li>
-    {{ end }}
+      {{ end }}
   </ul>
 </div>

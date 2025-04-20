@@ -3,10 +3,19 @@
   <h1><span class="title">{{ .Title | markdownify }}</span></h1>
   {{ with .Params.author }}{{ . }}{{ end }}
   {{ if (gt .Params.date 0) }}{{ .Date.Format "2006/01/02" }}{{ end }}
+  <div class="categories">
+  {{ with .Site.Taxonomies.categories }}
+    categories:
+    {{ range $key, $value := . }}
+      <a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}">{{ $key }}</a>
+    {{ end }}
+  {{ end }}
+  </div>
 </div>
 
-<main>
+
+<article>
 {{ .Content }}
-</main>
+</article>
 
 {{ partial "footer.html" . }}

@@ -1,25 +1,32 @@
-    <div id="Publications" class="publications">
+    <div id="publications" class="pubs">
+      {{ if .IsHome }}
       <div class="profileTitle">Seclect Publications</div>
-      {{ range .Site.Data.publications }}
-        <div class="publication-item">
-          <h3>{{ .title }}</h3>
-          <strong>Conference 1</strong>
+      {{ else}}
+      <div class="profileTitle">All Publications</div>
+      {{ end }}
+      {{ $data := cond .IsHome .Site.Data.selectpub .Site.Data.pubs }}
+      {{ range $data }}
+        <div class="pub-item">
+          <div class="pub-title">
+            <div class="booktitle">{{ .conference }}</div>
+            <h3>{{ .title }}</h3>
+          </div>
           <div>{{ .authors | markdownify }}</div>
           <p><em>{{ .details }}</em></p>
           <div class="links">
-          {{ if .pdf }}
+            {{ if .pdf }}
             <span class="label"><a href="{{ .pdf }}" target="_blank">📜 PDF</a></span>
-          {{ end }}
-          {{ if .slides }}
+            {{ end }}
+            {{ if .slides }}
             <span class="label"><a href="{{ .slides }}" target="_blank">📽️ Slides</a></span>
-          {{ end }}
-          {{ if .video }}
+            {{ end }}
+            {{ if .video }}
             <span class="label"><a href="{{ .video }}" target="_blank">📹 Video</a></span>
-          {{ end }}
-          {{ if .code }}
+            {{ end }}
+            {{ if .code }}
             <span class="label"><a href="{{ .code }}" target="_blank">💻 Code</a></span>
-          {{ end }}
-          {{ if .bib }}
+            {{ end }}
+            {{ if .bib }}
             <details class="label">
               <summary>📎 Bib</summary>
               <div class="bib">
@@ -29,10 +36,12 @@
                   data-target="bib-{{ .bib }}"
                   onclick="copyToClipboard(event)">Copy</button>
             </details>
-          {{ end }}
+            {{ end }}
           </div>
           <hr>
         </div>
       {{ end }}
+      {{ if .IsHome }}
+        <div style="text-align: right"><a href='{{ relURL "pubs"}}'>All PUBLICATIONS ></a></div>
+      {{ end }}
     </div>
-

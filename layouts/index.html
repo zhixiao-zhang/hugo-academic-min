@@ -2,10 +2,9 @@
 
 {{ .Content }}
 
-{{ if .Site.Params.singleBlog }}
-{{ partial "Blog.html" . }}
-{{ else }}
-{{ partial "Academic.html" . }}
+{{ $pageContext := . }}
+{{ range .Site.Params.homepage }}
+{{ partial (printf "homepage/%s.html" .) $pageContext }}
 {{ end }}
 
 {{ partial "footer.html" . }}

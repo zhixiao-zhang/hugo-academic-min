@@ -1,0 +1,8 @@
+    <div id="news" class="news">
+      <div class="news-title"><span>📢 News:</span></div>
+      {{ range first 5 .Site.Data.news.content }}
+        <div class="news-content">
+            {{ . | markdownify }}
+        </div>
+      {{ end }}
+    </div>

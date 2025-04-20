@@ -12,19 +12,30 @@ params:
   description: "An academic website"
   mail: "example.example at outlook dot com"
   footer: "&copy; Volcano Rock 2024 -- Present"
-  singleBlog: false
-  menu:
-    - "About"
-    - "Contact"
-    - "News"
-    - "Publications"
-    - "Experience"
-    - "Students"
-    - "Teaching"
-    - "Service"
-    - "Blog"
   avatar: "profile.jpeg"
-  bib: true
+  homepage:
+    - about
+    - news
+    - contact
+    - publications
+    - students
+    - teaching
+    - service
+
+menus:
+  main:
+  - name: "About"
+    url: "#about"
+    weight: 10
+  - name: "Publications"
+    url: "/pages/publications"
+    weight: 20
+  - name: "Blog"
+    weight: 30
+    url: "/post/"
+  - name: "BibTeX"
+    weight: 40
+    url: "/pages/bibtex/"
 
 markup:
   highlight:
