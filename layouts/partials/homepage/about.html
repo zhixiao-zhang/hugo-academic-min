@@ -6,6 +6,6 @@
         {{ if .Site.Params.avatar }}
         <img src="{{ `images` | relURL }}/{{ .Site.Params.avatar }}" alt="{{ .Site.Params.author }}" class="avatar">
         {{ end }}
-        {{ .Site.Params.mail }}
+        <div><i class="fa-solid fa-envelope"></i> {{ .Site.Params.mail }}</div>
       </div>
     </div>
