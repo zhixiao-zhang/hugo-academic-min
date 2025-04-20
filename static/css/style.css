@@ -370,6 +370,8 @@ table {
 table thead th {border-bottom: 1px solid #ddd; }
 th,  td { padding: 5px; }
 thead,  tfoot,  tr:nth-child(even) { background: #eee; }
+ruby { font-size: 1.1em; }
+rt { font-size: 0.8em; }
 
 @media  (max-width: 768px) {
     main {
