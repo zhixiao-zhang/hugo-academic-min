@@ -4,12 +4,10 @@
   {{ with .Params.author }}{{ . }}{{ end }}
   {{ if (gt .Params.date 0) }}{{ .Date.Format "2006/01/02" }}{{ end }}
   <div class="categories">
-  {{ with .Site.Taxonomies.categories }}
     categories:
-    {{ range $key, $value := . }}
-      <a href="{{ $.Site.BaseURL }}/categories/{{ $key | urlize }}">{{ $key }}</a>
-    {{ end }}
-  {{ end }}
+    {{ range .Params.categories }}
+      <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+    {{ end }}    
   </div>
 </div>
 
