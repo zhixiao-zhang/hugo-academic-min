@@ -4,10 +4,12 @@
   {{ with .Params.author }}{{ . }}{{ end }}
   {{ if (gt .Params.date 0) }}{{ .Date.Format "2006/01/02" }}{{ end }}
   <div class="categories">
-    categories:
-    {{ range .Params.categories }}
-      <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
-    {{ end }}    
+    {{ if (gt .Params.categories 0) }}
+      categories:
+      {{ range .Params.categories }}
+        <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+      {{ end }}
+    {{ end }}
   </div>
 </div>
 
