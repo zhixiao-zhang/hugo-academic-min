@@ -1,0 +1,194 @@
+title: Memory Safety / PL / Systems Radar
+description: Recent arXiv papers filtered by my interests in systems security, PL,
+  and memory safety.
+generated_at: '2025-10-28T13:23:15.032089+00:00'
+papers:
+- arxiv_id: 2510.23517v1
+  title: "Linear effects, exceptions, and resource safety: a Curry-Howard\n  correspondence\
+    \ for destructors"
+  authors:
+  - Sidney Congard
+  - Guillaume Munch-Maccagnoni
+  - Rémi Douence
+  summary: "We analyse the problem of combining linearity, effects, and exceptions,\
+    \ in\nabstract models of programming languages, as the issue of providing some\
+    \ kind\nof strength for a monad $T(- \\oplus E)$ in a linear setting. We consider\
+    \ in\nparticular for $T$ the allocation monad, which we introduce to model and\
+    \ study\nresource-safety properties. We apply these results to a series of two\
+    \ linear\neffectful calculi for which we establish their resource-safety properties.\n\
+    \  The first calculus is a linear call-by-push-value language with two\nallocation\
+    \ effects $\\mathit{new}$ and $\\mathit{delete}$. The resource-safety\nproperties\
+    \ follow from the linear (and even ordered) character of the typing\nrules.\n\
+    \  We then explain how to integrate exceptions on top of linearity and effects\n\
+    by adjoining default destruction actions to types, as inspired by C++/Rust\ndestructors.\
+    \ We see destructors as objects $\\delta : A\\rightarrow TI$ in the\nslice category\
+    \ over $TI$. This construction gives rise to a second calculus, an\naffine ordered\
+    \ call-by-push-value language with exceptions and destructors, in\nwhich the weakening\
+    \ rule performs a side-effect. As in C++/Rust, a ``move''\noperation is necessary\
+    \ to allow random-order release of resources, as opposed\nto last-in-first-out\
+    \ order. Moving resources is modelled as an exchange rule\nthat performs a side-effect."
+  tldr: '- Addresses the risk of resource leaks and unsafe memory handling when combining
+    linear types, effects (like allocation/deallocation), and exceptions in programming
+    languages.
+
+    - Uses a monadic framework with allocation effects and destructors modeled in
+    slice categories, enforcing ordered/affine typing rules where moves and exceptions
+    trigger controlled side-effects.
+
+    - Ensures deterministic resource cleanup (like file handles or memory) even with
+    exceptions, preventing common vulnerabilities in systems programming where resources
+    might leak during error handling.'
+  ai_score: 9
+  ai_reason: This paper directly addresses linear/affine type systems for resource
+    safety (memory/temporal/spatial safety), formal semantics, effects modeling including
+    resource allocation/deallocation similar to Rust's ownership system, and destructor
+    mechanisms that are central to Rust's safety guarantees.
+  updated: '2025-10-27T16:56:44Z'
+  published: '2025-10-27T16:56:44Z'
+  pdf_url: http://arxiv.org/pdf/2510.23517v1
+  primary_category: cs.PL
+  categories:
+  - cs.PL
+  - cs.LO
+- arxiv_id: 2510.23211v1
+  title: "Proceedings of the Combined 32nd International Workshop on\n  Expressiveness\
+    \ in Concurrency and 22nd Workshop on Structural Operational\n  Semantics"
+  authors:
+  - Cinzia Di Giusto
+  - Giorgio Bacci
+  summary: 'This volume contains the proceedings of EXPRESS/SOS 2025: the Combined
+    32nd
+
+    International Workshop on Expressiveness in Concurrency and the 22nd Workshop
+
+    on Structural Operational Semantics, which was held in Aarhus, Denmark, as an
+
+    affiliated workshop of CONFEST 2025. The EXPRESS/SOS workshop series aims at
+
+    bringing together researchers interested in the formal semantics of systems and
+
+    programming concepts, and in the expressiveness of computational models.'
+  tldr: '- The paper is a proceedings volume for a concurrency and semantics workshop,
+    not a research paper addressing a specific problem or technical method.
+
+    - It focuses on formal semantics and expressiveness of computational models rather
+    than memory safety or system security risks.
+
+    - This foundational work provides theoretical underpinnings for reasoning about
+    concurrent systems, but does not propose concrete security mechanisms or address
+    specific low-level safety gaps.'
+  ai_score: 7
+  ai_reason: The paper's focus on formal semantics through structural operational
+    semantics directly aligns with the researcher's interests in formal semantics
+    and type systems, though it may have limited direct connection to more implementation-oriented
+    topics like Rust, sanitizers, or specific safety analyses.
+  updated: '2025-10-27T11:01:38Z'
+  published: '2025-10-27T11:01:38Z'
+  pdf_url: http://arxiv.org/pdf/2510.23211v1
+  primary_category: cs.LO
+  categories:
+  - cs.LO
+  - cs.FL
+- arxiv_id: 2510.18496v2
+  title: "LatticeHashForest: An Efficient Data Structure for Repetitive Data and\n\
+    \  Operations"
+  authors:
+  - Anamitra Ghorui
+  - Uday P. Khedker
+  summary: "Analysis of entire programs as a single unit, or whole-program analysis,\n\
+    involves propagation of large amounts of information through the control flow\n\
+    of the program. This is especially true for pointer analysis, where, unless\n\
+    significant compromises are made in the precision of the analysis, there is a\n\
+    combinatorial blowup of information. One of the key problems we observed in our\n\
+    own efforts to this end is that a lot of duplicate data was being propagated,\n\
+    and many low-level data structure operations were repeated a large number of\n\
+    times.\n  We present what we consider to be a novel and generic data structure,\n\
+    LatticeHashForest (LHF), to store and operate on such data in a manner that\n\
+    eliminates a majority of redundant computations and duplicate data in scenarios\n\
+    similar to those encountered in compilers and program optimization. LHF differs\n\
+    from similar work in this vein, such as hash-consing, ZDDs, and BDDs, by not\n\
+    only providing a way to efficiently operate on large, aggregate structures, but\n\
+    also modifying the elements of such structures in a manner that they can be\n\
+    deduplicated immediately. LHF also provides a way to perform a nested\nconstruction\
+    \ of elements such that they can be deduplicated at multiple levels,\ncutting\
+    \ down the need for additional, nested computations.\n  We provide a detailed\
+    \ structural description, along with an abstract model of\nthis data structure.\
+    \ An entire C++ implementation of LHF is provided as an\nartifact along with evaluations\
+    \ of LHF using examples and benchmark programs.\nWe also supply API documentation\
+    \ and a user manual for users to make\nindependent applications of LHF. Our main\
+    \ use case in the realm of pointer\nanalysis shows memory usage reduction to an\
+    \ almost negligible fraction, and\nspeedups beyond 4x for input sizes approaching\
+    \ 10 million when compared to\nother implementations."
+  tldr: '- Addresses the problem of excessive memory usage and redundant computation
+    in whole-program pointer analysis, where duplicate data and repeated operations
+    cause combinatorial blowup.
+
+    - Uses a nested deduplication data structure (LatticeHashForest) that eliminates
+    redundancy by modifying elements for immediate deduplication at multiple levels,
+    without requiring nested recomputation.
+
+    - Reduces memory consumption to near-zero and speeds up analysis by over 4x for
+    large inputs, enabling more precise and scalable memory-safety checks without
+    compromising accuracy.'
+  ai_score: 8
+  ai_reason: This paper directly addresses pointer analysis efficiency through a novel
+    data structure that reduces redundant computations and memory usage, which are
+    critical concerns in program analysis and memory safety research.
+  updated: '2025-10-26T05:05:00Z'
+  published: '2025-10-21T10:32:30Z'
+  pdf_url: http://arxiv.org/pdf/2510.18496v2
+  primary_category: cs.DS
+  categories:
+  - cs.DS
+  - cs.IT
+  - cs.OS
+  - cs.PL
+  - math.IT
+  - E.1; F.3.2; H.0
+- arxiv_id: 2510.01072v3
+  title: "Lessons Learned So Far From a Community Effort to Verify the Rust\n  Standard\
+    \ Library (work-in-progress)"
+  authors:
+  - Alex Le Blanc
+  - Patrick Lam
+  summary: "Although Rust primarily intends to be a safe programming language that\n\
+    excludes undefined behaviour, it provides its users with the escape hatch of\n\
+    unsafe Rust, allowing them to circumvent some of its strong compile-time\nchecks.\
+    \ This additional freedom has some advantages, including potentially more\nefficient\
+    \ code, which is one of the main reasons why unsafe code is used\nextensively\
+    \ throughout Rust's standard library. However, because unsafe code\nalso re-opens\
+    \ the door to undefined behaviour, Amazon has convened a community\nto verify\
+    \ the safety of the standard library, and in particular the unsafe code\ncontained\
+    \ therein. Given that this effort is done in public, is open-sourced,\nand has\
+    \ seen significant participation (from at least 50 different\ncontributors), we\
+    \ have access to a wealth of information on how people are\nverifying the standard\
+    \ library, as well as what is currently possible and what\nstill appears to be\
+    \ beyond the state of the art for verified software.\n  In this paper, we discuss\
+    \ the lessons learned thus far from this verification\neffort, from both our work\
+    \ on it, as well as that of the broader community. In\nparticular, we start by\
+    \ reviewing what has been accomplished thus far, as well\nas the main tools used\
+    \ (specifically, their advantages and their limitations).\nWe then focus on some\
+    \ of the remaining fundamental obstacles to verifying the\nstandard library, and\
+    \ propose potential solutions to overcome them. We hope\nthat these observations\
+    \ can guide future verification of not only the standard\nlibrary, but also unsafe\
+    \ Rust code in general."
+  tldr: '- Addresses the risk of undefined behavior in Rust''s standard library due
+    to widespread use of unsafe code blocks that bypass compiler safety checks.
+
+    - Uses community-driven verification with tools like Prusti and Miri to formally
+    prove memory safety properties and detect potential vulnerabilities in unsafe
+    code.
+
+    - Matters because it directly impacts Rust''s foundational safety guarantees,
+    where undetected bugs in standard library unsafe code could compromise entire
+    applications relying on it.'
+  ai_score: 9
+  ai_reason: This paper directly addresses memory safety through verification of unsafe
+    Rust code in the standard library, connecting to memory safety, type systems,
+    program analysis, formal semantics, Rust language features, and sanitization techniques.
+  updated: '2025-10-26T00:53:29Z'
+  published: '2025-10-01T16:16:45Z'
+  pdf_url: http://arxiv.org/pdf/2510.01072v3
+  primary_category: cs.PL
+  categories:
+  - cs.PL
