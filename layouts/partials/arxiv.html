@@ -8,16 +8,18 @@
 {{ $sortedKeys := sort $keys "value" "desc" }}
 <div class="bibs">
   <h1>Arxiv Selected Papers</h1>
-    {{ range $key := $sortedKeys }}
     {{ $day := index $ctx.Site.Data.arxiv $key }}
-    <h2>{{ $key }}</h2>
-    {{- if $day.generated_at -}}
-    {{ $t := time.AsTime $day.generated_at }}
-    {{ $local := $t.Local }}
-    Generated at {{ time.Format "2006-01-02 15:04 MST" $local }}
+    {{ $papers := $day.papers | default (slice) }}
+
+    {{ if gt (len $papers) 0 }}
+      <h2>{{ $key }}</h2>
+    {{ with $day.generated_at }}
+      {{ $t := time.AsTime . }}
+      {{ $local := $t.Local }}
+      Generated at {{ time.Format "2006-01-02 15:04 MST" $local }}
     {{ end }}
     <ul style="list-style: none; padding: 0; margin: 0;">
-    {{ range $p := $day.papers }}
+    {{ range $p := $papers }}
       <li>
         <strong>{{ $p.title }}</strong>
         <div style="color: #666; font-style: italic">
