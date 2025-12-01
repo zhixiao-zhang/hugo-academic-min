@@ -8,6 +8,7 @@
 {{ $sortedKeys := sort $keys "value" "desc" }}
 <div class="bibs">
   <h1>Arxiv Selected Papers</h1>
+  {{ range $key := $sortedKeys }}
     {{ $day := index $ctx.Site.Data.arxiv $key }}
     {{ $papers := $day.papers | default (slice) }}
 
@@ -66,6 +67,7 @@
         {{ end }}
       </li>
       {{ end }}
-  </ul>
+    </ul>
+  {{ end }}
 </div>
 {{ end }}
