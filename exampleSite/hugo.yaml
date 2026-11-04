@@ -36,9 +36,6 @@ menus:
   - name: "BibTeX"
     weight: 40
     url: "/pages/bibtex/"
-  - name: "Arxiv"
-    weight: 50
-    url: "/pages/arxiv/"
 
 markup:
   highlight:
